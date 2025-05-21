@@ -44,7 +44,7 @@ async def send_morning_message(context: ContextTypes.DEFAULT_TYPE):
 # Стартова команда
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("Бот активовано. Щоденне повідомлення налаштоване.")
-    context.job_queue.run_daily(send_morning_message, time(hour=7, minute=45), chat_id=update.message.chat_id)
+    context.job_queue.run_daily(send_morning_message, time(hour=22, minute=45), chat_id=update.message.chat_id)
 
 # Обробка кнопок
 async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
